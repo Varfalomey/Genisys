@@ -625,11 +625,7 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 	 * @return bool
 	 */
 	public function removeAttachment(PermissionAttachment $attachment){
-		if($this->perm == null){
-			return false;
-		}
 		$this->perm->removeAttachment($attachment);
-		return true;
 	}
 
 	public function recalculatePermissions(){
